@@ -17,6 +17,15 @@ const handleUserInput = function (key) {
         case 'w':
             connection.write("Move: up");
             break;
+        case 'a':
+            connection.write("Move: up");
+            break;
+        case 's':
+            connection.write("Move: up");
+            break;
+        case 'd':
+            connection.write("Move: up");
+            break;
     }
     if (key === '\u0003') {
         process.exit();
