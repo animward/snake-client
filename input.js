@@ -26,9 +26,8 @@ const handleUserInput = function (key) {
         case 'd':
             connection.write("Move: right");
             break;
-    }
-    if (key === '\u0003') {
-        process.exit();
+        case '\u0003':
+            process.exit();
     }
 };
 
