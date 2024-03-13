@@ -18,13 +18,13 @@ const handleUserInput = function (key) {
             connection.write("Move: up");
             break;
         case 'a':
-            connection.write("Move: up");
+            connection.write("Move: left");
             break;
         case 's':
-            connection.write("Move: up");
+            connection.write("Move: down");
             break;
         case 'd':
-            connection.write("Move: up");
+            connection.write("Move: right");
             break;
     }
     if (key === '\u0003') {
