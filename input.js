@@ -1,3 +1,5 @@
+let connection;
+
 // setup interface to handle user input from stdin
 const setupInput = function () {
     const stdin = process.stdin;
@@ -10,6 +12,12 @@ const setupInput = function () {
 
 // handle user input
 const handleUserInput = function (key) {
+    // movement
+    switch (key) {
+        case 'w':
+            connection.write("Move: up");
+            break;
+    }
     if (key === '\u0003') {
         process.exit();
     }
