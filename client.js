@@ -1,7 +1,7 @@
 const net = require("net");
 
 // Establishes a connection with the game server
-const connect = function () {
+const connect = function (setupInput) {
     const conn = net.createConnection({
         host: "165.227.47.243",
         port: 50541
@@ -16,9 +16,7 @@ const connect = function () {
         // Here you can send any initial data if needed
         conn.write("Name: Anim");
         // Move commands
-        setTimeout(() => {
-            conn.write("Move: up");
-        }, 1000);
+        setupInput(conn);
     });
 
     conn.on("data", (data) => {
