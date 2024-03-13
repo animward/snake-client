@@ -14,6 +14,7 @@ const connect = function () {
     conn.on("connect", () => {
         console.log("Connected to the server");
         // Here you can send any initial data if needed
+        conn.write("Name: Anim");
     });
 
     conn.on("data", (data) => {
