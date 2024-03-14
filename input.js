@@ -39,6 +39,9 @@ const handleUserInput = function (key) {
         case 'z':
             connection.write("Say: I'm a snake!");
             break;
+        case 'n':
+            connection.write("Say: nom, nom, nom");
+            break;
         case '\u0003':
             process.exit();
     }
